@@ -5,6 +5,7 @@ function Card(props) {
 
   const {
     image,
+    selected,
     clickCard
   } = props;
 
@@ -14,10 +15,10 @@ function Card(props) {
     backgroundRepeat: "no-repeat",
     backgroundImage: `url(${image})`
   };
-  
 
   return (
     <div className="card" onClick={() => clickCard(props.id)} style={ sectionStyle }>
+      {selected ? "SELECTED" : ""}
     </div>
   );
 }
