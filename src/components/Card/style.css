@@ -1,0 +1,20 @@
+.card {
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: center;
+  border: 20px solid #FFF;
+  transition: all .1s linear;
+}
+
+.card:hover,.card:active {
+  margin: 2px 0 23px 0;
+  box-shadow: 0 2px 5px #777, 0 2px 5px #777;
+}
+
+
+
