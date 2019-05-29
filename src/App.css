@@ -1,7 +1,10 @@
 .title {
   width: 100%;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 10px auto 0px auto;
+  font-size: 4em;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: green;
 }
 
 p { 
@@ -10,7 +13,7 @@ p {
   width: 100%;
   text-align: center;
 }
- 
+
 .wrapper-content { 
   width: 100%; 
   margin: 0 auto;
