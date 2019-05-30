@@ -81,6 +81,7 @@ class App extends React.Component {
 
       <Wrapper>
           <h1 className="title">Clicky Game</h1>
+          <p className="instructions">Click on an Image to Earn Points, but don't click on the same image twice!</p>
           <p>
               Score: <strong>{this.state.score} of {this.state.options.length}</strong> 
               &nbsp; | &nbsp; 

@@ -16,3 +16,38 @@
   box-shadow: 0 2px 5px #777, 0 2px 5px #777;
 }
 
+@media(max-width: 990px){
+  .card { 
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media(max-width: 679px){
+  .card { 
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media(max-width: 559px){
+  .card { 
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media(max-width: 375px){
+  .card { 
+    width: 85px;
+    height: 85px;
+  }
+}
+
+
+@media(max-width: 320px){
+  .card { 
+    width: 70px;
+    height: 70px;
+  }
+}
