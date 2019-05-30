@@ -58,7 +58,6 @@ class App extends React.Component {
         
           score++;                // score up
 
-          
           if(score > highScore){  // check high score
             highScore = score;    // update high score
           }
@@ -125,8 +124,8 @@ class App extends React.Component {
           {this.state.score === this.state.options.length ? (
             <div>
               <h3>You won!!!</h3>
-              <button onClick={this.resetGame}>Restart Game</button>  
-            </div>) : ""}
+              <button className="restartGame" onClick={this.resetGame}>Restart Game</button>  
+            </div>) : ""} 
           <p>
             <span className={this.state.guessed !== null ? (this.state.guessed ? "guesses correct show" : "guesses hide" ) : "guesses hide"}>You guessed correctly!</span>
             <span className={this.state.guessed !== null ? (this.state.guessed ? "guesses hide" : "guesses incorrect show" ) : "guesses hide"}>You guessed incorrectly!</span>

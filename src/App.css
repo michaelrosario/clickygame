@@ -33,6 +33,23 @@ p {
   max-width: 940px;
 }
 
+.restartGame { 
+  padding: 10px 30px 10px; 
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px #DDD, 0 2px 2px #777;
+  color: #666;
+  font-weight: 700;
+  font-size: 18px;
+  background: #EFEFEF;
+  outline: none;
+}
+
+.restartGame:active {
+  box-shadow: 0 2px 5px #DDD, 0 1px 1px #777;
+  border: none;
+}
+
 @media(max-width: 990px){
   .title { 
     font-size: 3em;
