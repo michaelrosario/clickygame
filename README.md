@@ -1,4 +1,4 @@
-# clickygame
+# Clicky Game
 A React Memory Game. Click on an Image to Earn Points, but don't click on the same image twice!
 
 ## Preview
