@@ -8,7 +8,7 @@ const INITIAL_STATE = {
   options,
   guessed: null,
   score: 0,
-  highScore: 0
+  highScore: 0 
 }
 
 class App extends React.Component {
@@ -26,42 +26,66 @@ class App extends React.Component {
 
     // shuffle order
     options = options.sort(() => Math.random() - 0.5);
-
+    let runStateUpdate = true;
 
     for (var i in options) {
+      
+      // find clicked item in the array
       if (options[i].id === id) {
+        
+        // check whether it's already selected
         if(options[i].selected){
+          
           score = 0;
           guessed = false;
           this.resetGame();
-          break;
+          runStateUpdate = false;
+          break; //stop the loop
+        
+        // update score and select
         } else {
-          // score up
-          score++;
+        
+          score++; // score up
+
+          // check high score
           if(score > highScore){
             highScore = score;
           }
+
           guessed = true;
           options[i].selected = true;
+
         }
         break; //Stop this loop, we found it!
       }
     }
-    this.setState({ options, score, highScore, guessed });
-    setTimeout(() => {
-      this.setState({guessed: null});
-    }, 3500)
+    
+    if(runStateUpdate){
+      console.log("state updated");
+      this.setState({ options, score, highScore, guessed });
+      setTimeout(() => {
+        this.setState({guessed: null});
+      }, 3500)
+    }
+   
   }
 
   resetGame = () => {
 
-    console.log("Game resets");
-    const options = Object.assign({},INITIAL_STATE);
+    console.log("state resets");
+    
+    //To do: reset using initial_state
+    //this.setState(INITIAL_STATE);
+
+    for (var i in options) {
+      options[i].selected = false;
+    }
 
     this.setState({ 
       options,
-      score: 0
-    });
+      score: 0,
+      guessed: false,
+    })
 
     setTimeout(() => {
       this.setState({ guessed: null });
