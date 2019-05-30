@@ -4,14 +4,16 @@ import Wrapper from "./components/Wrapper";
 import options from "./options.json";
 import "./App.css";
 
+const INITIAL_STATE = {
+  options,
+  guessed: null,
+  score: 0,
+  highScore: 0
+}
+
 class App extends React.Component {
 
-  state = {
-    options,
-    guessed: null,
-    score: 0,
-    highScore: 0
-  }
+  state = { ...INITIAL_STATE };
 
   handleCard = id => {
   
@@ -54,10 +56,7 @@ class App extends React.Component {
   resetGame = () => {
 
     console.log("Game resets");
-    const options = this.state.options;
-    for (var i in options) {
-       options[i].selected = false;
-    }
+    const options = Object.assign({},INITIAL_STATE);
 
     this.setState({ 
       options,
