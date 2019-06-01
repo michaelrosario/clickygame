@@ -116,7 +116,10 @@ class App extends React.Component {
 
       <Wrapper>
           <h1 className="title">Clicky Game</h1>
-          <p className="instructions">Click on an Image to Earn Points, but don't click on the same image twice!</p>
+          <p className="instructions">
+            Click on an Image to Earn Points, 
+            but don't click on the same image twice!
+          </p>
           <p>
               Score: <strong>{this.state.score} of {this.state.options.length}</strong> 
               &nbsp; | &nbsp; 
@@ -125,13 +128,39 @@ class App extends React.Component {
           {this.state.score === this.state.options.length ? (
             <div className="win-message">
               <h3>You won!!!</h3>
-              <button className="restartGame" onClick={this.resetGame}>Restart Game</button>  
+              <button 
+                className="restartGame" 
+                onClick={this.resetGame}>
+                  Restart Game
+              </button>  
             </div>) : ""} 
           <p>
-            <span className={this.state.guessed !== null ? (this.state.guessed ? "guesses correct show" : "guesses hide" ) : "guesses hide"}>You guessed correctly!</span>
-            <span className={this.state.guessed !== null ? (this.state.guessed ? "guesses hide" : "guesses incorrect show" ) : "guesses hide"}>You guessed incorrectly!</span>
+            <span 
+              className={this.state.guessed !== null ?
+               (this.state.guessed ? 
+                "guesses correct show" :  // true
+                "guesses hide" ) :        // false
+                "guesses hide"}           // false
+            >  
+                  You guessed correctly!
+            </span>
+            <span 
+              className={this.state.guessed !== null ? 
+                (this.state.guessed ?
+                  "guesses hide" :              // true
+                  "guesses incorrect show" ) :  // false
+                  "guesses hide"}               // false
+            >
+              You guessed incorrectly!
+            </span>
           </p>
-          <div className={this.state.guessed !== null ? (this.state.guessed ? "wrapper-content" : "shake wrapper-content" ) : "wrapper-content"}>  
+          <div 
+            className={this.state.guessed !== null ? 
+              (this.state.guessed ? 
+                "wrapper-content" :           // true
+                "shake wrapper-content" ) :   // false
+                "wrapper-content"}            // false
+          >  
             {cardOptions}
           </div>
       </Wrapper>
