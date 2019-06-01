@@ -23,8 +23,11 @@ class App extends React.Component {
     onClick event that will check whether the card
     was clicked already
   */
-  handleCard = id => {
-  
+
+  handleCard = (e,id) => {
+    
+    e.preventDefault();
+
     let {
       options,
       score,
@@ -93,7 +96,7 @@ class App extends React.Component {
       options,
       score: 0,
       guessed: false,
-    })
+    });
 
     setTimeout(() => {
       this.setState({ guessed: null });
@@ -120,7 +123,7 @@ class App extends React.Component {
               Highest Score: <strong>{this.state.highScore}</strong>
           </p>
           {this.state.score === this.state.options.length ? (
-            <div>
+            <div className="win-message">
               <h3>You won!!!</h3>
               <button className="restartGame" onClick={this.resetGame}>Restart Game</button>  
             </div>) : ""} 

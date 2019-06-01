@@ -16,7 +16,7 @@ function Card(props) {
   };
 
   return (
-    <div className="card" onClick={() => clickCard(props.id)} style={ sectionStyle }>
+    <div className="card" onClick={e => clickCard( e, props.id )} style={ sectionStyle }>
       {/* selected ? "SELECTED" : "" */}
     </div>
   );

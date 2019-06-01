@@ -22,6 +22,11 @@ p {
   text-align: center;
 }
 
+.win-message {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .wrapper-content { 
   width: 100%; 
   margin: 0 auto;
