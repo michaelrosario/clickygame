@@ -15,8 +15,6 @@ class App extends React.Component {
 
   state = { ...INITIAL_STATE };
 
-  
-
   shuffleCards = () => {
     return this.state.options.sort(() => Math.random() - 0.5);
   }
@@ -86,7 +84,7 @@ class App extends React.Component {
     
     //To do: reset using initial_state
     //this.setState(INITIAL_STATE);
-
+    
     for (var i in options) {
       options[i].selected = false;
     }
